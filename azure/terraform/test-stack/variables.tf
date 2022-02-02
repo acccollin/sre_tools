@@ -18,6 +18,11 @@ variable "azure_tenant_id" {
   description = "SPN Tenant ID"
 }
 
+variable "azure_object_id" {
+  type        = string
+  description = "SPN Object ID"
+}
+
 variable "address_space" {
     type        = list(string)
     description = "VNET address space"

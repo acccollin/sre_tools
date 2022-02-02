@@ -1,0 +1,10 @@
+
+~/tools/terraform/terraform init
+~/tools/terraform/terraform plan -var-file=tfvars/azure-east-us.tfvars -lock=false
+
+~/tools/terraform/terraform plan -var-file=tfvars/azure-east-us.tfvars -target="azurerm_resource_group.rg" -lock=false
+~/tools/terraform/terraform plan -var-file=tfvars/azure-east-us.tfvars -target="azurerm_key_vault.kv" -lock=false
+
+
+~/tools/terraform/terraform apply -var-file=tfvars/azure-east-us.tfvars -target="azurerm_resource_group.rg" -lock=false -auto-approve
+~/tools/terraform/terraform apply -var-file=tfvars/azure-east-us.tfvars -target="azurerm_key_vault.kv" -lock=false -auto-approve
